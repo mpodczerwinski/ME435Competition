@@ -2,15 +2,15 @@
 manifest
 ADDED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:2:1-35:12
 INJECTED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:2:1-35:12
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\befd4f3706d0b934ca10a700348ec97f\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\634fc09a055928f4d2eb052571a02f73\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\ee1895177573e53f129360dd661b1b1f\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\ea53947f0f1e64fddd695c6b06a0c687\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\6c50eecc072c72cda62f87dd17b46b62\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\7f33ced983e04e314dd28ff26f950762\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\34d72b6854061fc5f8e6b162efd499ef\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\e7b9e8a5500d878cde2ab9c17819903c\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\d1a15d703d9ed3532bfc7206a4af6940\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0.aar\41f9c239f67ec1b659311b2c6a1c5d67\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0.aar\ad93040f32f8267c9f7e0c257ed03075\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0.aar\5a9366db494391d635d77e665181283c\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0.aar\12b8ecee17804ad3ebf6b59e3f5f3485\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0.aar\6dd7cee583fc843a9139b2d7d3c3fea0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0.aar\a9cfd6156b415ffdd478feb97562b21c\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0.aar\28c87250337431889a24499c6778b5d0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0.aar\6e3e29d610d508311eddcf83afac1a9a\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0.aar\1da3d3d35ef5b8b706c6d4861c85e0a5\AndroidManifest.xml:17:1-31:12
 INJECTED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:3:5-46
@@ -22,28 +22,28 @@ uses-sdk
 ADDED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:5:5-43
 INJECTED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:5:5-43
 INJECTED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\befd4f3706d0b934ca10a700348ec97f\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\befd4f3706d0b934ca10a700348ec97f\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\634fc09a055928f4d2eb052571a02f73\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\634fc09a055928f4d2eb052571a02f73\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\ee1895177573e53f129360dd661b1b1f\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\ee1895177573e53f129360dd661b1b1f\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\ea53947f0f1e64fddd695c6b06a0c687\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\ea53947f0f1e64fddd695c6b06a0c687\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\6c50eecc072c72cda62f87dd17b46b62\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\6c50eecc072c72cda62f87dd17b46b62\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\7f33ced983e04e314dd28ff26f950762\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\7f33ced983e04e314dd28ff26f950762\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\34d72b6854061fc5f8e6b162efd499ef\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\34d72b6854061fc5f8e6b162efd499ef\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\e7b9e8a5500d878cde2ab9c17819903c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\e7b9e8a5500d878cde2ab9c17819903c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\d1a15d703d9ed3532bfc7206a4af6940\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\d1a15d703d9ed3532bfc7206a4af6940\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0.aar\41f9c239f67ec1b659311b2c6a1c5d67\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0.aar\41f9c239f67ec1b659311b2c6a1c5d67\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0.aar\ad93040f32f8267c9f7e0c257ed03075\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0.aar\ad93040f32f8267c9f7e0c257ed03075\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0.aar\5a9366db494391d635d77e665181283c\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0.aar\5a9366db494391d635d77e665181283c\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0.aar\12b8ecee17804ad3ebf6b59e3f5f3485\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0.aar\12b8ecee17804ad3ebf6b59e3f5f3485\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0.aar\6dd7cee583fc843a9139b2d7d3c3fea0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0.aar\6dd7cee583fc843a9139b2d7d3c3fea0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0.aar\a9cfd6156b415ffdd478feb97562b21c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0.aar\a9cfd6156b415ffdd478feb97562b21c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0.aar\28c87250337431889a24499c6778b5d0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0.aar\28c87250337431889a24499c6778b5d0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0.aar\6e3e29d610d508311eddcf83afac1a9a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0.aar\6e3e29d610d508311eddcf83afac1a9a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0.aar\1da3d3d35ef5b8b706c6d4861c85e0a5\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0.aar\1da3d3d35ef5b8b706c6d4861c85e0a5\AndroidManifest.xml:21:5-23:58
 INJECTED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:5:5-43
 INJECTED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:5:5-43
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\befd4f3706d0b934ca10a700348ec97f\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0.aar\41f9c239f67ec1b659311b2c6a1c5d67\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		INJECTED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:5:5-43
@@ -64,24 +64,24 @@ ADDED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\
 		ADDED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:11:22-76
 application
 ADDED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:13:5-33:19
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\befd4f3706d0b934ca10a700348ec97f\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\befd4f3706d0b934ca10a700348ec97f\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\634fc09a055928f4d2eb052571a02f73\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\634fc09a055928f4d2eb052571a02f73\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\ee1895177573e53f129360dd661b1b1f\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\ee1895177573e53f129360dd661b1b1f\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\ea53947f0f1e64fddd695c6b06a0c687\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\ea53947f0f1e64fddd695c6b06a0c687\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\6c50eecc072c72cda62f87dd17b46b62\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\6c50eecc072c72cda62f87dd17b46b62\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\7f33ced983e04e314dd28ff26f950762\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\7f33ced983e04e314dd28ff26f950762\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\34d72b6854061fc5f8e6b162efd499ef\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\34d72b6854061fc5f8e6b162efd499ef\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\e7b9e8a5500d878cde2ab9c17819903c\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\e7b9e8a5500d878cde2ab9c17819903c\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\d1a15d703d9ed3532bfc7206a4af6940\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\d1a15d703d9ed3532bfc7206a4af6940\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0.aar\41f9c239f67ec1b659311b2c6a1c5d67\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0.aar\41f9c239f67ec1b659311b2c6a1c5d67\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0.aar\ad93040f32f8267c9f7e0c257ed03075\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0.aar\ad93040f32f8267c9f7e0c257ed03075\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0.aar\5a9366db494391d635d77e665181283c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0.aar\5a9366db494391d635d77e665181283c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0.aar\12b8ecee17804ad3ebf6b59e3f5f3485\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0.aar\12b8ecee17804ad3ebf6b59e3f5f3485\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0.aar\6dd7cee583fc843a9139b2d7d3c3fea0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0.aar\6dd7cee583fc843a9139b2d7d3c3fea0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0.aar\a9cfd6156b415ffdd478feb97562b21c\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0.aar\a9cfd6156b415ffdd478feb97562b21c\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0.aar\28c87250337431889a24499c6778b5d0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0.aar\28c87250337431889a24499c6778b5d0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0.aar\6e3e29d610d508311eddcf83afac1a9a\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0.aar\6e3e29d610d508311eddcf83afac1a9a\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0.aar\1da3d3d35ef5b8b706c6d4861c85e0a5\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0.aar\1da3d3d35ef5b8b706c6d4861c85e0a5\AndroidManifest.xml:25:5-29:19
 	android:label
 		ADDED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:16:9-41
 	android:icon
@@ -121,24 +121,24 @@ ADDED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\
 	android:name
 		ADDED from C:\Users\podczemd\Documents\GitHub\ME435Competition\GolfBallDelivery\app\src\main\AndroidManifest.xml:30:17-82
 meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\befd4f3706d0b934ca10a700348ec97f\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\634fc09a055928f4d2eb052571a02f73\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-alpha1.aar\634fc09a055928f4d2eb052571a02f73\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\ee1895177573e53f129360dd661b1b1f\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-alpha1.aar\ee1895177573e53f129360dd661b1b1f\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\ea53947f0f1e64fddd695c6b06a0c687\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-alpha1.aar\ea53947f0f1e64fddd695c6b06a0c687\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\6c50eecc072c72cda62f87dd17b46b62\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-alpha1.aar\6c50eecc072c72cda62f87dd17b46b62\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\7f33ced983e04e314dd28ff26f950762\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-alpha1.aar\7f33ced983e04e314dd28ff26f950762\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\34d72b6854061fc5f8e6b162efd499ef\AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-alpha1.aar\34d72b6854061fc5f8e6b162efd499ef\AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\e7b9e8a5500d878cde2ab9c17819903c\AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-alpha1.aar\e7b9e8a5500d878cde2ab9c17819903c\AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\d1a15d703d9ed3532bfc7206a4af6940\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-alpha1.aar\d1a15d703d9ed3532bfc7206a4af6940\AndroidManifest.xml:25:5-27:41
+ADDED from [com.android.support:appcompat-v7:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0.aar\41f9c239f67ec1b659311b2c6a1c5d67\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0.aar\ad93040f32f8267c9f7e0c257ed03075\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0.aar\ad93040f32f8267c9f7e0c257ed03075\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0.aar\5a9366db494391d635d77e665181283c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0.aar\5a9366db494391d635d77e665181283c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0.aar\12b8ecee17804ad3ebf6b59e3f5f3485\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0.aar\12b8ecee17804ad3ebf6b59e3f5f3485\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0.aar\6dd7cee583fc843a9139b2d7d3c3fea0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0.aar\6dd7cee583fc843a9139b2d7d3c3fea0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0.aar\a9cfd6156b415ffdd478feb97562b21c\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0.aar\a9cfd6156b415ffdd478feb97562b21c\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0.aar\28c87250337431889a24499c6778b5d0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0.aar\28c87250337431889a24499c6778b5d0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0.aar\6e3e29d610d508311eddcf83afac1a9a\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0.aar\6e3e29d610d508311eddcf83afac1a9a\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0.aar\1da3d3d35ef5b8b706c6d4861c85e0a5\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0.aar\1da3d3d35ef5b8b706c6d4861c85e0a5\AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\befd4f3706d0b934ca10a700348ec97f\AndroidManifest.xml:27:9-38
+		ADDED from [com.android.support:appcompat-v7:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0.aar\41f9c239f67ec1b659311b2c6a1c5d67\AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\befd4f3706d0b934ca10a700348ec97f\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:appcompat-v7:26.0.0] C:\Users\podczemd\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0.aar\41f9c239f67ec1b659311b2c6a1c5d67\AndroidManifest.xml:27:13-51
