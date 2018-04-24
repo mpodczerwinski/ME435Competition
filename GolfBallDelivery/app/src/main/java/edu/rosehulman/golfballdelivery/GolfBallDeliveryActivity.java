@@ -1,9 +1,10 @@
 package edu.rosehulman.golfballdelivery;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -15,9 +16,11 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class GolfBallDeliveryActivity extends Activity {
+import edu.rosehulman.me435.RobotActivity;
 
-	/** Constant used with logging that you'll see later. */
+public class GolfBallDeliveryActivity extends RobotActivity {
+    private Scripts mScripts;
+    /** Constant used with logging that you'll see later. */
 	public static final String TAG = "GolfBallDelivery";
 
     /**
@@ -26,6 +29,17 @@ public class GolfBallDeliveryActivity extends Activity {
     public enum BallColor {
         NONE, BLUE, RED, YELLOW, GREEN, BLACK, WHITE
     }
+
+    public enum State {
+        READY_FOR_MISSION,
+        NEAR_BALL_SCRIPT,
+        DRIVE_TOWARDS_FAR_BALL,
+        FAR_BALL_SCRIPT,
+        DRIVE_TOWARDS_HOME,
+        WAITING_FOR_PICKUP,
+        SEEKING_HOME,
+    }
+    public State mState;
 
     /**
      * An array (of size 3) that stores what color is present in each golf ball stand location.
@@ -150,6 +164,11 @@ public class GolfBallDeliveryActivity extends Activity {
             TableLayout fakeGpsButtonTable = (TableLayout) findViewById(R.id.fake_gps_button_table);
             fakeGpsButtonTable.setVisibility(View.GONE);
         }
+        setLocationToColor(1, BallColor.RED);
+        setLocationToColor(2, BallColor.WHITE);
+        setLocationToColor(3, BallColor.BLUE);
+        setState(State.READY_FOR_MISSION);
+        mScripts = new Scripts(this);
     }
 
     /**
@@ -179,18 +198,84 @@ public class GolfBallDeliveryActivity extends Activity {
 
     // --------------------------- Methods added ---------------------------
 
+    @Override
+    public void loop() {
+        super.loop();
+    }
 
-	
-	
-	
-	
-	// --------------------------- Drive command ---------------------------
-	
-	
+    public void setState(State newState) {
+        // Make sure when the match ends that no scheduled timer events from scripts change the FSM state.
+        if (mState == State.READY_FOR_MISSION && newState != State.NEAR_BALL_SCRIPT) {
+            Toast.makeText(this, "Illegal state transition out of READY_FOR_MISSION", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        mStateStartTime = System.currentTimeMillis();
+        mCurrentStateTextView.setText(newState.name());
+        speak(newState.name().replace("_", " ").toLowerCase());
+        switch (newState) {
+            case READY_FOR_MISSION:
+                mGoOrMissionCompleteButton.setBackgroundResource(R.drawable.green_button);
+                mGoOrMissionCompleteButton.setText("Go!");
+                sendWheelSpeed(0, 0);
+                break;
+            case NEAR_BALL_SCRIPT:
+                mGpsInfoTextView.setText("---"); // Clear GPS display (optional)
+                mGuessXYTextView.setText("---"); // Clear guess display (optional)
+                // TODO: Run a near ball script that results in removing that ball.
+                break;
+            case DRIVE_TOWARDS_FAR_BALL:
+                // All actions handled in the loop function.
+                break;
+            case FAR_BALL_SCRIPT:
+                // TODO: Run a far ball script that results in removing that ball and white (if present).
+                break;
+            case DRIVE_TOWARDS_HOME:
+                // All actions handled in the loop function.
+                break;
+            case WAITING_FOR_PICKUP:
+                sendWheelSpeed(0, 0);
+                break;
+            case SEEKING_HOME:
+                // Actions handled in the loop function.
+                break;
+        }
+        mState = newState;
+    }
+
+
+
+
+    // --------------------------- Drive command ---------------------------
+
+    @Override
+    public void sendWheelSpeed(int leftDutyCycle, int rightDutyCycle) {
+        super.sendWheelSpeed(leftDutyCycle, rightDutyCycle);
+        mLeftDutyCycleTextView.setText("Left\n"+mLeftDutyCycle);
+        mRightDutyCycleTextView.setText("Right\n"+mRightDutyCycle);
+    }
+
 
     // --------------------------- Sensor listeners ---------------------------
 
+    @Override
+    public void onLocationChanged(double x, double y, double heading, Location location) {
+        super.onLocationChanged(x, y, heading, location);
+        String gpsInfo = getString(R.string.xy_format,mCurrentGpsX,mCurrentGpsY);
+        if(mCurrentGpsHeading!=NO_HEADING){
+            gpsInfo += " " + getString(R.string.degrees_format,mCurrentGpsHeading);
+        }
+        else{
+            gpsInfo +=" ?°";
+        }
+        gpsInfo += " " + mGpsCounter;
+        mGpsInfoTextView.setText(gpsInfo);
+    }
 
+    @Override
+    public void onSensorChanged(double fieldHeading, float[] orientationValues) {
+        super.onSensorChanged(fieldHeading, orientationValues);
+        mSensorOrientationTextView.setText(getString(R.string.degrees_format,mCurrentSensorHeading));
+    }
 
     // --------------------------- Button Handlers ----------------------------
 
@@ -254,7 +339,35 @@ public class GolfBallDeliveryActivity extends Activity {
      * Sends a message to Arduino to perform a ball color test.
      */
     public void handlePerformBallTest(View view) {
-        Toast.makeText(this, "TODO: Implement handlePerformBallTest", Toast.LENGTH_SHORT).show();
+//        endCommand("CUSTOM balltest");
+        onCommandReceived("1R");
+        mCommandHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                onCommandReceived("2W");
+            }
+        }, 1000);
+        mCommandHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                onCommandReceived("3B");
+            }
+        }, 2000);
+    }
+
+    @Override
+    protected void onCommandReceived(String receivedCommand) {
+        super.onCommandReceived(receivedCommand);
+        //TODO: Handle commands from the Arduino
+        if(receivedCommand.equalsIgnoreCase("1R")){
+            setLocationToColor(1,BallColor.RED);
+        }
+        else if(receivedCommand.equalsIgnoreCase("2W")){
+         setLocationToColor(2,BallColor.WHITE);
+        }
+        else if(receivedCommand.equalsIgnoreCase("3B")){
+            setLocationToColor(3,BallColor.BLUE);
+        }
     }
 
     AlertDialog alert;
@@ -303,50 +416,88 @@ public class GolfBallDeliveryActivity extends Activity {
      * Test GPS point when going to the Far ball (assumes Blue Team heading to red ball).
      */
     public void handleFakeGpsF0(View view) {
-        Toast.makeText(this, "TODO: Implement handleFakeGpsF0", Toast.LENGTH_SHORT).show();
+        onLocationChanged(165,50,NO_HEADING,null); //Midfield
     }
 
     public void handleFakeGpsF1(View view) {
-        Toast.makeText(this, "TODO: Implement handleFakeGpsF1", Toast.LENGTH_SHORT).show();
+        onLocationChanged(209,50,NO_HEADING,null); //out of range so ignored
     }
 
     public void handleFakeGpsF2(View view) {
-        Toast.makeText(this, "TODO: Implement handleFakeGpsF2", Toast.LENGTH_SHORT).show();
+        onLocationChanged(231,50,135,null); //Within range
     }
 
     public void handleFakeGpsF3(View view) {
-        Toast.makeText(this, "TODO: Implement handleFakeGpsF3", Toast.LENGTH_SHORT).show();
+        onLocationChanged(240,41,35,null); //Within range
     }
 
     public void handleFakeGpsH0(View view) {
-        Toast.makeText(this, "TODO: Implement handleFakeGpsH0", Toast.LENGTH_SHORT).show();
+        onLocationChanged(165,0,-179.9,null); //Midfield
     }
 
     public void handleFakeGpsH1(View view) {
-        Toast.makeText(this, "TODO: Implement handleFakeGpsH1", Toast.LENGTH_SHORT).show();
+        onLocationChanged(11,0,179.9,null); //out of range
     }
 
     public void handleFakeGpsH2(View view) {
-        Toast.makeText(this, "TODO: Implement handleFakeGpsH2", Toast.LENGTH_SHORT).show();
+        onLocationChanged(9,0,-170,null); //Within range
     }
 
     public void handleFakeGpsH3(View view) {
-        Toast.makeText(this, "TODO: Implement handleFakeGpsH3", Toast.LENGTH_SHORT).show();
+        onLocationChanged(0,-9,-170,null); //Within range
     }
 
     public void handleSetOrigin(View view) {
-        Toast.makeText(this, "TODO: Implement handleSetOrigin", Toast.LENGTH_SHORT).show();
+        mFieldGps.setCurrentLocationAsOrigin();
     }
 
     public void handleSetXAxis(View view) {
-        Toast.makeText(this, "TODO: Implement handleSetXAxis", Toast.LENGTH_SHORT).show();
+        mFieldGps.setCurrentLocationAsLocationOnXAxis();
     }
 
     public void handleZeroHeading(View view) {
-        Toast.makeText(this, "TODO: Implement handleZeroHeading", Toast.LENGTH_SHORT).show();
+        mFieldOrientation.setCurrentFieldHeading(0);
     }
 
     public void handleGoOrMissionComplete(View view) {
-        Toast.makeText(this, "TODO: Implement handleGoOrMissionComplete", Toast.LENGTH_SHORT).show();
+        if (mState == State.READY_FOR_MISSION) {
+            mMatchStartTime = System.currentTimeMillis();
+            updateMissionStrategyVariables();
+            mGoOrMissionCompleteButton.setBackgroundResource(R.drawable.red_button);
+            mGoOrMissionCompleteButton.setText("Mission Complete!");
+            setState(State.NEAR_BALL_SCRIPT);
+        } else {
+            setState(State.READY_FOR_MISSION);
+        }
+    }
+
+
+    /** Updates the mission strategy variables. */
+    private void updateMissionStrategyVariables() {
+        mNearBallGpsY = -50.0; // Note, X value is a constant so no need to figure it out.
+        mFarBallGpsY = 50.0; // Note, X value is a constant so no need to figure it out.
+        mNearBallLocation = 1;
+        mWhiteBallLocation = 0; // Assume there is no white ball present for now (update later).
+        mFarBallLocation = 3;
+
+        // Example of doing real planning.
+        for (int i = 0; i < 3; i++) {
+            BallColor currentLocationsBallColor = mLocationColors[i];
+            if (currentLocationsBallColor == BallColor.WHITE) {
+                mWhiteBallLocation = i + 1;
+            }
+// TODO: In your project you’ll add more code to calculate the values below correctly!
+        }
+
+        if(mOnRedTeam){
+            Log.d(TAG, "I'm on the red team!");
+        }
+        else{
+            Log.d(TAG, "I'm on the blue team!");
+        }
+
+        Log.d(TAG, "Near ball position: " + mNearBallLocation + " drop off at y = " + mNearBallGpsY);
+        Log.d(TAG, "Far ball position: " + mFarBallLocation + " drop off at y = " + mFarBallGpsY);
+        Log.d(TAG, "White ball position: " + mWhiteBallLocation);
     }
 }
