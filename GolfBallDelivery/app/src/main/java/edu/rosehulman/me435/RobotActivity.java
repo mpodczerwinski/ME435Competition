@@ -139,6 +139,7 @@ public class RobotActivity extends AccessoryActivity implements FieldGpsListener
       mGuessX += DEFAULT_SPEED_FT_PER_SEC * (double) LOOP_INTERVAL_MS / 1000.0 * Math.cos(Math.toRadians(mCurrentSensorHeading));
       mGuessY += DEFAULT_SPEED_FT_PER_SEC * (double) LOOP_INTERVAL_MS / 1000.0 * Math.sin(Math.toRadians(mCurrentSensorHeading));
     }
+
     // Do more in subclass.
   };
 

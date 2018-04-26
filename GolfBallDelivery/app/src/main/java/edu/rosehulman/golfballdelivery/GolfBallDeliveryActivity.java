@@ -201,6 +201,8 @@ public class GolfBallDeliveryActivity extends RobotActivity {
     @Override
     public void loop() {
         super.loop();
+        mStateTimeTextView.setText(""+(getStateTimeMs()/1000));
+        mGuessXYTextView.setText("("+(int) mGuessX+","+(int) mGuessY+")");
     }
 
     public void setState(State newState) {
@@ -221,13 +223,13 @@ public class GolfBallDeliveryActivity extends RobotActivity {
             case NEAR_BALL_SCRIPT:
                 mGpsInfoTextView.setText("---"); // Clear GPS display (optional)
                 mGuessXYTextView.setText("---"); // Clear guess display (optional)
-                // TODO: Run a near ball script that results in removing that ball.
+                mScripts.nearBallScript();
                 break;
             case DRIVE_TOWARDS_FAR_BALL:
                 // All actions handled in the loop function.
                 break;
             case FAR_BALL_SCRIPT:
-                // TODO: Run a far ball script that results in removing that ball and white (if present).
+                mScripts.farBallScript();
                 break;
             case DRIVE_TOWARDS_HOME:
                 // All actions handled in the loop function.
@@ -246,6 +248,7 @@ public class GolfBallDeliveryActivity extends RobotActivity {
 
 
     // --------------------------- Drive command ---------------------------
+
 
     @Override
     public void sendWheelSpeed(int leftDutyCycle, int rightDutyCycle) {
@@ -375,7 +378,7 @@ public class GolfBallDeliveryActivity extends RobotActivity {
      * Clicks to the red arrow image button that should show a dialog window.
      */
     public void handleDrivingStraight(View view) {
-        Toast.makeText(this, "handleDrivingStraight", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "handleDrivingStraight", Toast.LENGTH_SHORT).show();
         AlertDialog.Builder builder = new AlertDialog.Builder(GolfBallDeliveryActivity.this);
         builder.setTitle("Driving Straight Calibration");
         View dialoglayout = getLayoutInflater().inflate(R.layout.driving_straight_dialog, (ViewGroup) getCurrentFocus());
@@ -405,7 +408,8 @@ public class GolfBallDeliveryActivity extends RobotActivity {
             public void onClick(View v) {
                 mLeftStraightPwmValue = leftDutyCyclePicker.getValue();
                 mRightStraightPwmValue = rightDutyCyclePicker.getValue();
-                Toast.makeText(GolfBallDeliveryActivity.this, "TODO: Implement the drive straight test", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(GolfBallDeliveryActivity.this, "TODO: Implement the drive straight test", Toast.LENGTH_SHORT).show();
+                mScripts.testStraightScript();
             }
         });
         alert = builder.create();
