@@ -16,6 +16,7 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import edu.rosehulman.me435.NavUtils;
 import edu.rosehulman.me435.RobotActivity;
 
 public class GolfBallDeliveryActivity extends RobotActivity {
@@ -200,10 +201,68 @@ public class GolfBallDeliveryActivity extends RobotActivity {
 
     @Override
     public void loop() {
-        super.loop();
-        mStateTimeTextView.setText(""+(getStateTimeMs()/1000));
-        mGuessXYTextView.setText("("+(int) mGuessX+","+(int) mGuessY+")");
+        super.loop(); // Important to call super first so that the RobotActivity loop function is run first.
+        // RobotActivity updated the mGuessX and mGuessY already. Here we need to display it.
+        mStateTimeTextView.setText("" + (getStateTimeMs() / 1000));
+        mGuessXYTextView.setText("(" + (int) mGuessX + ", " + (int) mGuessY + ")");
+
+        // Match timer.
+        long timeRemainingSeconds = MATCH_LENGTH_MS / 1000;
+        if (mState != State.READY_FOR_MISSION) {
+            timeRemainingSeconds = (MATCH_LENGTH_MS - getMatchTimeMs()) / 1000;
+            if (getMatchTimeMs() > MATCH_LENGTH_MS) {
+                setState(State.READY_FOR_MISSION);
+            }
+        }
+        mMatchTimeTextView.setText(getString(R.string.time_format, timeRemainingSeconds / 60, timeRemainingSeconds % 60));
+        switch (mState) {
+            case DRIVE_TOWARDS_FAR_BALL:
+                seekTargetAt(FAR_BALL_GPS_X,mFarBallGpsY);
+                break;
+            case DRIVE_TOWARDS_HOME:
+                seekTargetAt(0,0);
+                break;
+            case WAITING_FOR_PICKUP:
+                if(getStateTimeMs()>8000){
+                    setState(State.SEEKING_HOME);
+                }
+                break;
+            case SEEKING_HOME:
+                if(getStateTimeMs()>8000){
+                    setState(State.WAITING_FOR_PICKUP);
+                }
+                else{
+                    seekTargetAt(0,0);
+                }
+                break;
+            default:
+                // Other states don't need to do anything, but could.
+                break;
+
+        }}
+
+    /**
+     * Adjust the PWM duty cycles based on the turn amount needed to point at the target heading.
+     *
+     * @param x GPS X value of the target.
+     * @param y GPS Y value of the target. */
+    private void seekTargetAt(double x, double y) {
+        int leftDutyCycle = mLeftStraightPwmValue;
+        int rightDutyCycle = mRightStraightPwmValue;
+        double targetHeading = NavUtils.getTargetHeading(mGuessX, mGuessY, x, y);
+        double leftTurnAmount = NavUtils.getLeftTurnHeadingDelta(mCurrentSensorHeading, targetHeading);
+        double rightTurnAmount = NavUtils.getRightTurnHeadingDelta(mCurrentSensorHeading, targetHeading);
+        if (leftTurnAmount < rightTurnAmount) {
+            leftDutyCycle = mLeftStraightPwmValue - (int)(leftTurnAmount * SEEKING_DUTY_CYCLE_PER_ANGLE_OFF_MULTIPLIER);
+            leftDutyCycle = Math.max(leftDutyCycle, LOWEST_DESIRABLE_SEEKING_DUTY_CYCLE);
+        } else {
+            rightDutyCycle = mRightStraightPwmValue - (int)(rightTurnAmount * SEEKING_DUTY_CYCLE_PER_ANGLE_OFF_MULTIPLIER);
+            rightDutyCycle = Math.max(rightDutyCycle, LOWEST_DESIRABLE_SEEKING_DUTY_CYCLE);
+        }
+        sendWheelSpeed(leftDutyCycle, rightDutyCycle);
     }
+
+
 
     public void setState(State newState) {
         // Make sure when the match ends that no scheduled timer events from scripts change the FSM state.
@@ -263,16 +322,30 @@ public class GolfBallDeliveryActivity extends RobotActivity {
     @Override
     public void onLocationChanged(double x, double y, double heading, Location location) {
         super.onLocationChanged(x, y, heading, location);
-        String gpsInfo = getString(R.string.xy_format,mCurrentGpsX,mCurrentGpsY);
-        if(mCurrentGpsHeading!=NO_HEADING){
-            gpsInfo += " " + getString(R.string.degrees_format,mCurrentGpsHeading);
+        String gpsInfo = getString(R.string.xy_format, x, y);
+        if (heading <= 180.0 && heading > -180.0) {
+            gpsInfo += " " + getString(R.string.degrees_format, heading);
+        } else {
+            gpsInfo += " ?º";
         }
-        else{
-            gpsInfo +=" ?°";
-        }
-        gpsInfo += " " + mGpsCounter;
+        gpsInfo += "    " + mGpsCounter;
         mGpsInfoTextView.setText(gpsInfo);
+
+        if (mState == State.DRIVE_TOWARDS_FAR_BALL) {
+            double distanceFromTarget = NavUtils.getDistance(mCurrentGpsX, mCurrentGpsY,
+                    FAR_BALL_GPS_X, mFarBallGpsY);
+            if (distanceFromTarget < ACCEPTED_DISTANCE_AWAY_FT) {
+                setState(State.FAR_BALL_SCRIPT);
+            }
+        }
+        if (mState == State.DRIVE_TOWARDS_HOME) {
+            // Shorter to write since the RobotActivity already calculates the distance to 0, 0.
+            if (mCurrentGpsDistance < ACCEPTED_DISTANCE_AWAY_FT) {
+                setState(State.WAITING_FOR_PICKUP);
+            }
+        }
     }
+
 
     @Override
     public void onSensorChanged(double fieldHeading, float[] orientationValues) {
